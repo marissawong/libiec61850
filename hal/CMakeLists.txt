@@ -96,7 +96,7 @@ set_source_files_properties(${libhal_SRCS}
                                        PROPERTIES LANGUAGE CXX)
 ENDIF()
 
-ELSEIF(UNIX)
+ELSE()
 IF(APPLE)
 set (libhal_SRCS
     ${libhal_macos_SRCS}

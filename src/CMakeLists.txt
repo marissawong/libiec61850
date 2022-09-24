@@ -240,7 +240,7 @@ set (library_SRCS
 
 ENDIF(WITH_WPCAP)
 
-ELSEIF(UNIX)
+ELSE()
 IF(APPLE)
 set (library_SRCS
     ${lib_common_SRCS}
@@ -292,7 +292,7 @@ endif( WIN32 )
 add_library (iec61850-shared SHARED ${library_SRCS} )
 
 set_target_properties(iec61850-shared PROPERTIES
-           OUTPUT_NAME iec61850
+           OUTPUT_NAME iec61850-shared
            SOVERSION "${LIB_VERSION_MAJOR}.${LIB_VERSION_MINOR}.${LIB_VERSION_PATCH}"
 )
 
