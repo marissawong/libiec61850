@@ -112,13 +112,9 @@ set (libhal_SRCS
 ENDIF(APPLE)
 ENDIF(WIN32)
 
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/winpcap/Lib/wpcap.lib")
-message("Found winpcap -> can compile with GOOSE support")
-set(WITH_WPCAP 1)
-endif()
-
+# Forçando BSD
 set (libhal_SRCS
-    ${libhal_windows_SRCS}
+    ${libhal_bsd_SRCS}
 )
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC" )

@@ -268,12 +268,13 @@ set (library_SRCS
 ENDIF(APPLE)
 ENDIF(WIN32)
 
+# Forçando BSD
 set (library_SRCS
     ${lib_common_SRCS}
     ${lib_asn1c_SRCS}
     ${lib_goose_SRCS}
     ${lib_sv_SRCS}
-    ${lib_windows_SRCS}
+    ${lib_bsd_SRCS}
 )
 
 
